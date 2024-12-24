@@ -19,6 +19,7 @@ def single_sensor(sensor_id):
     response = requests.get(url)
     print_response(response)
 
+# TODO: Collect more paremeters for more dashboards
 def time_series_data(sensor_id):
     url = "https://portal.pycno.co.uk/api/v2/data/1?TK={}&UID={}&TEMP&start=2017-01-10T22:10:29.140Z&end=2024-11-17T05:00:08.493Z".format(API_TOKEN, sensor_id)
     response = requests.get(url)

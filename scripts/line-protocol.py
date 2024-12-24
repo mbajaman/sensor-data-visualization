@@ -1,4 +1,5 @@
 # File to create line protocol output for importing data into influxdb
+# TODO: This might not be necessary and can be converted into a tool instead perhaps?
 
 import json
 

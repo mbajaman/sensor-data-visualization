@@ -1,3 +1,4 @@
+# TODO: into single compose.yaml in project root
 services:
   grafana:
     image: grafana/grafana-enterprise
