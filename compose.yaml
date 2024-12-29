@@ -1,5 +1,5 @@
-# TODO: Condense into single compose.yaml in project root
 services:
+  # InfluxDB Container
   influxdb2:
     image: influxdb:2
     ports:
@@ -22,6 +22,7 @@ services:
       - type: volume
         source: influxdb2-config
         target: /etc/influxdb2
+  # Grafana container
   grafana:
     image: grafana/grafana-enterprise
     container_name: grafana
@@ -30,6 +31,7 @@ services:
       - '3000:3000'
     volumes:
       - grafana-storage:/var/lib/grafana
+# Env variables
 secrets:
   influxdb2-admin-username:
     file: ./env/.env.influxdb2-admin-username
